@@ -1,9 +1,20 @@
-# configuration file for building snapshots and releases with jitpack.io
+# Specify the JDK version
 jdk:
-  - openjdk17
-before_install:
-  - ./scripts/prepareJitpackEnvironment.sh
-install:
-  - FILE="-Dfile=com-andersonakoto-androidyoutubeplayer.aar"
-  - mvn install:install-file $FILE -DgroupId=com.github.andersonakoto -DartifactId=1 -Dversion=master-SNAPSHOT -Dpackaging=aar -DgeneratePom=true
-                                            
+  version: openjdk11
+
+# Set the build tool and configuration
+build:
+  script:
+    # Use Gradle to build the project
+    - ./gradlew clean build
+
+# Define the build cache configuration (if needed)
+cache:
+  directories:
+    - .gradle/caches
+    - .gradle/wrapper
+
+# Specify the directories or files to include in the built artifact
+artifacts:
+  files:
+    - build/libs/*.jar
