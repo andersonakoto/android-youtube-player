@@ -1,7 +1,7 @@
 ext.versions = [
         // Project
         minSdk                          : 28,
-        compileSdk                      : 34,
+        compileSdk                      : 33,
 
         publishVersion_core             : '12.1.0',
         publishVersionCode_core         : 20,
@@ -28,7 +28,7 @@ ext.versions = [
         androidxLifecycleRuntime        : '2.6.0',
 
         // Google Play
-        googlePlayServicesCastFramework : '21.2.0',
+        googlePlayServicesCastFramework : '21.5.0',
 
         // psoffritti
         sampleAppTemplate               : '1.0.3',
