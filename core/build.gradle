@@ -8,7 +8,6 @@ android {
   defaultConfig {
     minSdkVersion versions.minSdk
     targetSdkVersion versions.compileSdk
-    multiDexEnabled true
   }
 
   sourceSets {
@@ -31,7 +30,6 @@ dependencies {
   testImplementation "junit:junit:$versions.junit"
   androidTestImplementation "androidx.test:runner:$versions.runner"
   androidTestImplementation "androidx.test.espresso:espresso-core:$versions.espressoCore"
-  implementation "androidx.multidex:multidex:2.0.1"
   api "androidx.lifecycle:lifecycle-runtime-ktx:$versions.androidxLifecycleRuntime"
 }
 
