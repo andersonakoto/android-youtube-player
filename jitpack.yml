@@ -4,6 +4,6 @@ jdk:
 before_install:
   - ./scripts/prepareJitpackEnvironment.sh
 install:
-  - FILE="-Dfile=yourSDKName.aar"
+  - FILE="-Dfile=com-andersonakoto-androidyoutubeplayer.aar"
   - mvn install:install-file $FILE -DgroupId=com.github.andersonakoto -DartifactId=1 -Dversion=master-SNAPSHOT -Dpackaging=aar -DgeneratePom=true
                                             
