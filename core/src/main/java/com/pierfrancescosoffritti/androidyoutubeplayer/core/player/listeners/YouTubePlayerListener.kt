@@ -50,6 +50,8 @@ interface YouTubePlayerListener {
    */
   fun onVideoDuration(youTubePlayer: YouTubePlayer, duration: Float)
 
+  fun onVideoQuality(youTubePlayer: YouTubePlayer, quality: String)
+
   /**
    * Called periodically by the player, the argument is the percentage of the video that has been buffered.
    * @param loadedFraction a number between 0 and 1 that represents the percentage of the video that has been buffered.
