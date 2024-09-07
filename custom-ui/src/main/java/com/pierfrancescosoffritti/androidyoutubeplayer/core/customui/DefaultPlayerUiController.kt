@@ -43,7 +43,7 @@ class DefaultPlayerUiController(
   private val videoTitle: TextView = rootView.findViewById(R.id.video_title)
   private val liveVideoIndicator: TextView = rootView.findViewById(R.id.live_video_indicator)
 
-  private val progressBar: ProgressBar = rootView.findViewById(R.id.progress)
+  // private val progressBar: ProgressBar = rootView.findViewById(R.id.progress)
   private val menuButton: ImageView = rootView.findViewById(R.id.menu_button)
   private val playPauseButton: ImageView = rootView.findViewById(R.id.play_pause_button)
   private val youTubeButton: ImageView = rootView.findViewById(R.id.youtube_button)
@@ -71,7 +71,7 @@ class DefaultPlayerUiController(
 
       if (state === PlayerConstants.PlayerState.PLAYING || state === PlayerConstants.PlayerState.PAUSED || state === PlayerConstants.PlayerState.VIDEO_CUED) {
         panel.setBackgroundColor(ContextCompat.getColor(panel.context, android.R.color.transparent))
-        progressBar.visibility = View.GONE
+        // progressBar.visibility = View.GONE
 
         if (isPlayPauseButtonEnabled) playPauseButton.visibility = View.VISIBLE
         if (isCustomActionLeftEnabled) customActionLeft.visibility = View.VISIBLE
@@ -83,7 +83,7 @@ class DefaultPlayerUiController(
         updatePlayPauseButtonIcon(false)
 
         if (state === PlayerConstants.PlayerState.BUFFERING) {
-          progressBar.visibility = View.VISIBLE
+          // progressBar.visibility = View.VISIBLE
           panel.setBackgroundColor(
             ContextCompat.getColor(
               panel.context,
@@ -97,7 +97,7 @@ class DefaultPlayerUiController(
         }
 
         if (state === PlayerConstants.PlayerState.UNSTARTED) {
-          progressBar.visibility = View.GONE
+          // progressBar.visibility = View.GONE
           if (isPlayPauseButtonEnabled) playPauseButton.visibility = View.VISIBLE
         }
       }
