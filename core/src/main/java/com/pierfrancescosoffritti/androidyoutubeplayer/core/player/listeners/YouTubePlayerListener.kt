@@ -22,7 +22,7 @@ interface YouTubePlayerListener {
    */
   fun onPlaybackQualityChange(
     youTubePlayer: YouTubePlayer,
-    playbackQuality: PlayerConstants.PlaybackQuality
+    playbackQuality: String
   )
 
   /**
