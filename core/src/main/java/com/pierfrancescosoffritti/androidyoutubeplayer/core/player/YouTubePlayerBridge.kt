@@ -153,7 +153,6 @@ class YouTubePlayerBridge(private val youTubePlayerOwner: YouTubePlayerBridgeCal
   fun sendVideoQuality(quality: String) = mainThreadHandler.post {
     youTubePlayerOwner.listeners.forEach { it.onVideoQuality(youTubePlayerOwner.getInstance(), quality) }
   }
-}
 
   private fun parsePlayerState(state: String): PlayerConstants.PlayerState {
     return when {
