@@ -9,7 +9,7 @@ import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.YouTubePlayer
 abstract class AbstractYouTubePlayerListener : YouTubePlayerListener {
   override fun onReady(youTubePlayer: YouTubePlayer) {}
   override fun onStateChange(youTubePlayer: YouTubePlayer, state: PlayerConstants.PlayerState) {}
-  override fun onPlaybackQualityChange(youTubePlayer: YouTubePlayer, playbackQuality: PlayerConstants.PlaybackQuality) {}
+  override fun onPlaybackQualityChange(youTubePlayer: YouTubePlayer, playbackQuality: String) {}
   override fun onPlaybackRateChange(youTubePlayer: YouTubePlayer, playbackRate: PlayerConstants.PlaybackRate) {}
   override fun onError(youTubePlayer: YouTubePlayer, error: PlayerConstants.PlayerError) {}
   override fun onApiChange(youTubePlayer: YouTubePlayer) {}
