@@ -59,6 +59,8 @@ interface YouTubePlayer {
    */
   fun toggleFullscreen()
 
+  fun setPlaybackQuality(quality: String)
+
   fun addListener(listener: YouTubePlayerListener): Boolean
   fun removeListener(listener: YouTubePlayerListener): Boolean
 }
