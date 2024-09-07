@@ -7,7 +7,6 @@ import android.webkit.JavascriptInterface
 import androidx.annotation.RestrictTo
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.listeners.YouTubePlayerListener
 
-
 /**
  * Bridge used for Javascript-Java communication.
  */
