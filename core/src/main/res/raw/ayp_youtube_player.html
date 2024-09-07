@@ -190,7 +190,6 @@
 // this function will return an array like: ["hd1080","hd720","large","medium","small","tiny","auto"]
 function sendVideoQuality(player) {
     YouTubePlayerBridge.sendVideoQuality(JSON.stringify(player.getAvailableQualityLevels()))
-  console.log("Video Quality Available: " + JSON.stringify(player.getAvailableQualityLevels()))
 }
 
 function setPlaybackQuality(playbackQuality) {
