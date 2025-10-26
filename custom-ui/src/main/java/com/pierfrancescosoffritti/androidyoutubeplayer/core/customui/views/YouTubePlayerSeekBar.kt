@@ -140,6 +140,13 @@ class YouTubePlayerSeekBar(context: Context, attrs: AttributeSet? = null) :
     updateState(state)
   }
 
+  override fun onPlaybackQualityChange(
+    youTubePlayer: YouTubePlayer,
+    playbackQuality: String
+  ) {
+    TODO("Not yet implemented")
+  }
+
   override fun onCurrentSecond(youTubePlayer: YouTubePlayer, second: Float) {
     // ignore if the user is currently moving the SeekBar
     if (seekBarTouchStarted)
@@ -161,6 +168,11 @@ class YouTubePlayerSeekBar(context: Context, attrs: AttributeSet? = null) :
     seekBar.max = duration.toInt()
   }
 
+  override fun onVideoQuality(
+    youTubePlayer: YouTubePlayer,
+    quality: String
+  ) {}
+
   override fun onVideoLoadedFraction(youTubePlayer: YouTubePlayer, loadedFraction: Float) {
     if (showBufferingProgress)
       seekBar.secondaryProgress = (loadedFraction * seekBar.max).toInt()
@@ -171,11 +183,6 @@ class YouTubePlayerSeekBar(context: Context, attrs: AttributeSet? = null) :
   override fun onReady(youTubePlayer: YouTubePlayer) {}
   override fun onVideoId(youTubePlayer: YouTubePlayer, videoId: String) {}
   override fun onApiChange(youTubePlayer: YouTubePlayer) {}
-  override fun onPlaybackQualityChange(
-    youTubePlayer: YouTubePlayer,
-    playbackQuality: PlayerConstants.PlaybackQuality
-  ) {
-  }
 
   override fun onPlaybackRateChange(
     youTubePlayer: YouTubePlayer,

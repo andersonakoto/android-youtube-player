@@ -62,9 +62,9 @@ private class YouTubePlayerImpl(
   override fun addListener(listener: YouTubePlayerListener) = listeners.add(listener)
   override fun removeListener(listener: YouTubePlayerListener) = listeners.remove(listener)
   override fun setPlaybackQuality(quality: String) = webView.invoke("setPlaybackQuality", quality)
-
-  override fun addListener(listener: YouTubePlayerListener) = synchronized(lock) { listeners.add(listener) }
-  override fun removeListener(listener: YouTubePlayerListener) = synchronized(lock) { listeners.remove(listener) }
+//
+//  override fun addListener(listener: YouTubePlayerListener) = synchronized(lock) { listeners.add(listener) }
+//  override fun removeListener(listener: YouTubePlayerListener) = synchronized(lock) { listeners.remove(listener) }
 
   fun getListeners(): Collection<YouTubePlayerListener> = synchronized(lock) { listeners.toList() }
 
