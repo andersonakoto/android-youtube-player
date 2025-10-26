@@ -7,6 +7,7 @@ import com.pierfrancescosoffritti.androidyoutubeplayer.chromecast.chromecastsend
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.PlayerConstants
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.YouTubePlayer
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.YouTubePlayerBridge
+import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.BooleanProvider
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.listeners.YouTubePlayerListener
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.toFloat
 
@@ -129,6 +130,10 @@ class ChromecastYouTubePlayer internal constructor(private val chromecastCommuni
     chromecastCommunicationChannel.sendMessage(message)
   }
 
+  override fun isMutedAsync(callback: BooleanProvider) {
+    throw NotImplementedError("isMutedAsync is not implemented in ChromecastYouTubePlayer")
+  }
+
   override fun setVolume(volumePercent: Int) {
     val message = JSONUtils.buildFlatJson(
       "command" to ChromecastCommunicationConstants.SET_VOLUME,
@@ -155,8 +160,6 @@ class ChromecastYouTubePlayer internal constructor(private val chromecastCommuni
 
     chromecastCommunicationChannel.sendMessage(message)
   }
-
-  override fun toggleFullscreen() { }
 
   override val listeners: Collection<YouTubePlayerListener> get() =  youTubePlayerListeners
   override fun addListener(listener: YouTubePlayerListener): Boolean = youTubePlayerListeners.add(listener)
